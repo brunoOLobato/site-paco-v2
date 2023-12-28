@@ -1,0 +1,92 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+
+.slider {
+  background: white;
+  height: 200px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: auto;
+}
+
+.slider .slide {
+  height: 200px;
+  width: 350px;
+  margin-right: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.slider .slide img {
+  transition: transform 0.3s ease-in-out;
+  transition: filter 0.3s ease-in-out; /* Adicione uma transição suave ao filtro */
+}
+
+.slider .slide:hover img {
+  transform: scale(1);
+  filter: brightness(0.3); /* Reduz o brilho da imagem para escurecê-la */
+}
+
+.slider .slide:hover img {
+  transform: scale(1);
+  filter: brightness(0.7);
+}
+
+.slider .slide:hover::after {
+  opacity: 1;
+}
+
+/* CSS para ajustar a velocidade da animação quando o mouse estiver sobre uma das imagens */
+/* CSS para pausar a animação quando o mouse estiver sobre uma das imagens */
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: auto;
+  animation-play-state: running;
+  animation-delay: -40s; /* Tempo de espera para tornar a pausa imperceptível */
+}
+
+.slide .slide-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #fff;
+  border-radius: 100px;
+  padding: 15px 40px;
+  max-width: 250px;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slide:hover .slide-info {
+  opacity: 1;
+}

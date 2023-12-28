@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup de Simulação de Celular</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .phone-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      right: 0px;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 500px;
+      background-color: rgba(255, 255, 255, 0.89);
+      border-radius: 36px;
+      border: 8px solid #707070;
+      z-index: 1000;
+    }
+
+    .phone-header {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: right;
+    }
+
+    .phone-content {
+      padding: 20px;
+    }
+
+    .close-button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-button:hover {
+      background-color: #555;
+    }
+
+    #openPopup {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #openPopup:hover {
+      background-color: #f7f7f7;
+    }
+
+    .Rectangle-grey {
+      height: 12px;
+      flex-grow: 0;
+      width: 40px;
+      border-radius: 56px;
+      background-color: #707070;
+    }
+    .celular_retangulo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    input[type="nome"],
+    input[type="empresa"],
+    input[type="telefone"],
+    input[type="email"] {
+      border: none;
+      border-bottom: 1px solid #000; /* Borda na parte inferior */
+      background: transparent; /* Fundo transparente */
+      width: 80%;
+      padding: 5px;
+      font-weight: 600;
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 20px;
+      margin-left: 20px;
+    }
+
+    .celular_title {
+      font-size: 20px;
+      font-family: "Inter";
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      font-weight: 800;
+      margin-left: 20px;
+    }
+
+    input[type="nome"]:focus,
+    input[type="email"]:focus,
+    input[type="telefone"]:focus,
+    input[type="empresa"]:focus {
+      outline: none;
+      border-bottom: 1px solid #333; /* Borda cinza mais escura quando focado */
+    }
+    .botao_ligar_verde {
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      height: 30%;
+      width: 30%;
+    }
+  </style>
+  <body>
+    <button id="openPopup">Abrir Celular</button>
+    <div id="phonePopup" class="phone-popup">
+      <!-- <div class="phone-header">
+        <button id="closePopup" class="close-button">Fechar</button>
+      </div>
+      <div class="phone-content"> -->
+      <!-- Conteúdo do celular aqui -->
+      <div class="celular_retangulo">
+        <div div class="Rectangle-grey"></div>
+      </div>
+      <br />
+      <p class="celular_title">Digite seus dados</p>
+      <input type="nome" id="nome" placeholder="Seu nome" />
+      <input type="empresa" id="empresa" placeholder="Nome da sua empresa" />
+      <input
+        type="telefone"
+        id="telefone"
+        placeholder="Número de telefone com ddd"
+      />
+      <input type="email" id="email" placeholder="Seu e-mail" />
+      <img class="botao_ligar_verde" src="bt_green.svg" />
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openButton = document.getElementById("openPopup")
+        const closeButton = document.getElementById("closePopup")
+        const phonePopup = document.getElementById("phonePopup")
+
+        openButton.addEventListener("click", function () {
+          phonePopup.style.display = "block"
+        })
+
+        closeButton.addEventListener("click", function () {
+          phonePopup.style.display = "none"
+        })
+      })
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const openButton = document.getElementById("openPopup")
+        const closeButton = document.getElementById("closePopup")
+        const phonePopup = document.getElementById("phonePopup")
+        const telefoneInput = document.getElementById("telefone")
+
+        // Aplicar a máscara de telefone
+        $(telefoneInput).inputmask("(99) 99999-9999")
+
+        openButton.addEventListener("click", function () {
+          phonePopup.style.display = "block"
+        })
+
+        closeButton.addEventListener("click", function () {
+          phonePopup.style.display = "none"
+        })
+      })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+  </body>
+</html>

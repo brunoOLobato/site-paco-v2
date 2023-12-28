@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Responsive bootstrap landing template" />
+
+  <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" />
+  <link rel="shortcut icon" href="./images/favicon_io/android-chrome-512x512.png" />
+  <link rel="shortcut icon" href="./images/favicon_io/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="./images/favicon_io/favicon-16x16.png" />
+  <link rel="shortcut icon" href="./images/favicon_io/favicon-32x32.png" />
+  <link rel="shortcut icon" href="./images/favicon_io/favicon.ico" />
+
+  <title>Fale Paco - Políticas de privacidade</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/materialdesignicons.min.css" rel="stylesheet" />
+  <link href="css/mobiriseicons.css" rel="stylesheet" />
+
+  <!--Magnific popup -->
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+
+  <!--Slider-->
+  <link rel="stylesheet" href="css/owl.carousel.css" />
+  <link rel="stylesheet" href="css/owl.theme.css" />
+  <link rel="stylesheet" href="css/owl.transitions.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/menu.css" rel="stylesheet" />
+  <link href="css/termosepoliticas.css" rel="stylesheet" />
+  <link href="css/button.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!--Template Color-->
+  <link href="css/colors/default.css" rel="stylesheet" />
+  <style>
+    .logolink {
+      min-height: 10px;
+      position: absolute;
+      margin-left: 170px;
+    }
+    
+    .logolink img {
+      height: 30px !important;
+      margin: 0 !important;
+      animation-name: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu Mobile fixo no topo -->
+  <header class="menu_mobile">
+    <!-- Imagem à esquerda -->
+    <div class="paco_voa">
+      <a href="index.html"><img src="images/Paco_voa.png" alt="Paco" class="logo-light" height="150px"></a>
+    </div>
+    <!-- Botão à direita -->
+    <div class="menu_localizacao_mobile">
+      <!-- Imagem no meio -->
+      <a href="index.html" class="logolink"><img src="images/logos/logo.png" alt="Logo Fale Paco"></a>
+      <a href="https://falepaco.com.br/login">
+        <button class="botao_navbar">Minha Fale Paco</button>
+        <!--Nav one-->
+      </a>
+    </div>
+    <div class="cidade_selecionada">
+      <p class="cidade_localizacao_mobile" style="margin-bottom: 0px !important;" id="cityDisplay2">Minha Localização</p>
+      <a id="accept-button-mobile" href="#"><img class="btn_escolha_cidade" src="images/icons/svg/localizacao.svg" alt="localizacao"></img>
+      </a>
+    </div>
+  </header>
+  <!-- Menu fixo no topo -->
+  <header class="menu">
+    <!-- Imagem à esquerda -->
+    <div class="paco_voa">
+      <a href="index.html"><img src="images/Paco_voa.png" alt="Paco" class="logo-light" height="150px"></a>
+    </div>
+    <!-- Imagem no meio -->
+    <a href="index.html" class="logolink"><img src="images/logos/logo.png" alt="Logo Fale Paco"></a>
+    <!-- Botão à direita -->
+    <div class="menu_localizacao">
+      <p class="cidade_localizacao" id="cityDisplay">Minha Localização</p>
+      <a id="accept-button" href="#"><img class="btn_escolha_cidade" src="images/icons/svg/localizacao.svg" alt="localizacao"></img>
+      </a>
+      <a href="https://falepaco.com.br/login">
+        <button class="botao_navbar">Minha Fale Paco</button>
+        <!--Nav one-->
+      </a>
+    </div>
+  </header>
+  <!-- Final do Menu -->
+
+  <style>
+    .botao_navbar {
+      margin-top: 15px;
+      background-color: transparent;
+      /* Fundo transparente para o estilo "outlined" */
+      color: #2480be;
+      /* Cor do texto */
+      border: 2px solid #2480be;
+      /* Borda contornada */
+      border-radius: 250px;
+      min-width: 80px;
+      font-size: 12px;
+      max-width: 130px;
+      height: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    
+    .title-politica {
+      margin-top: 120px;
+    }
+    
+    @media (max-width: 768px) {
+      .title-politica {
+        margin-top: 0px;
+      }
+    }
+  </style>
+
+  <!-- How do work -->
+  <section class="section-politicas services-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="container-politica">
+            <h3 class="title-politica">Política Privacidade</h3>
+            <br />
+            <p class="text-politicas">
+              A sua privacidade é importante para nós. É política do hellopaco respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site hellopaco, e outros sites que possuímos e operamos. <br /><br /> Solicitamos informações
+              pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.
+              <br /><br /> Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso,
+              divulgação, cópia, uso ou modificação não autorizados.
+              <br /><br /> Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.
+              <br /><br /> O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas
+              de privacidade.
+              <br /><br /> Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.
+              <br /><br /> O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre
+              em contacto connosco.
+              <br /><br /> O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.<br /> Para
+              mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.<br /> Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos.
+              Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que
+              possam ser do seu interesse. Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos
+              creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.
+              <br /><br />
+
+              <b>Compromisso do Usuário</b><br /><br /> O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o hellopaco oferece no site e com caráter enunciativo, mas não limitativo:
+              <br /><br /> A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;<br /><br /> B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, betano ou azar, qualquer tipo de pornografia ilegal,
+              de apologia ao terrorismo ou contra os direitos humanos;<br /><br /> C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do hellopaco, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos
+              ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.<br /><br />
+              <b>Mais informações</b><br /><br /> Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos
+              recursos que você usa em nosso site.
+              <br /><br />
+              <b>Esta política é efetiva a partir de 20 Março 2023 05:05</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- How do work end  -->
+
+  <!-- Footer -->
+  <section class="bg-dark-footer footer" id="contato">
+    <div class="container">
+      <div class="row_footer space-footer">
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Suporte 24/7</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item1"></li>
+                  <li id="item2"><a href="https://api.whatsapp.com/send/?phone=551132301682&text&type=phone_number&app_absent=0" aria-label="Whatsapp (11) 3230.1682"><i class="fa fa-whatsapp" aria-hidden="true"></i> (11) 3230.1682</a></li>
+                  <li id="item1"></li>
+                  <li id="item2"><a href="tel:08000888088" aria-label="Ligação 0800.088.8088"><i class="fa fa-phone" aria-hidden="true"></i> 0800.088.8088</a></li>
+                  <li id="item2"><a href="https://suportepaco.com.br/falepaco" target="_blank" aria-label="Base de conhecimento"><i class="fa fa-book" aria-hidden="true"></i> Base de conhecimento</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Fale conosco</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item2">
+                    <a href="mailto:suporte@falepaco.com.br">atendimento@falepaco.com.br</a
+                      >
+                    </li>
+                    <li id="item2">
+                      <a href="mailto:suporte@falepaco.com.br"
+                        >suporte@falepaco.com.br</a
+                      >
+                    </li>
+                    <li id="item2">
+                      <a href="mailto:marketing@falepaco.com.br"
+                        >marketing@falepaco.com.br</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-lg-4-c">
+            <div class="service-boxed">
+              <div class="service-body">
+                <div class="title-and-icon-footer">
+                  <h5>Legal</h5>
+                </div>
+                <div class="list-itens-footer">
+                  <ul class="list-itens-footer-ul">
+                    <li id="item2">
+                      <a href="termos.html" target="_blank">Termos de uso</a>
+                  </li>
+                  <li id="item2">
+                    <a href="politicas.html" target="_blank">Políticas de privacidade</a
+                      >
+                    </li>
+                    <li id="item2">
+                      <a href="regrasip.html" target="_blank"
+                        >Regras para telefone IP</a
+                      >
+                    </li>
+                    <li id="item2">
+                      <a href="cobertura.html" target="_blank">Cobertura</a>
+                  </li>
+                  <li id="item2">
+                    <a href="cancelamento.html" target="_blank">Cancelamento</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-lg-4-c">
+            <div class="service-boxed">
+              <div class="service-body">
+                <div class="title-and-icon-footer">
+                  <h5>Redes Sociais</h5>
+                </div>
+                <div class="list-itens-footer">
+                  <ul class="list-itens-footer-ul">
+                    <li id="item2">
+                      <a href="termos.html" target="_blank">Facebook</a>
+                  </li>
+                  <li id="item2">
+                    <a href="politicas.html" target="_blank">Instagram</a>
+                  </li>
+                  <li id="item2">
+                    <a href="cobertura.html" target="_blank">Youtube</a>
+                  </li>
+                  <li id="item2">
+                    <a href="cancelamento.html" target="_blank">Linkedin</a>
+                  </li>
+                  <li id="item2">
+                    <a href="cancelamento.html" target="_blank">TikTok</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark-footer-2 footer" id="contato">
+    <div class="container">
+      <div class="sufooter">
+      </div>
+    </div>
+    <div class="sub-footer-two">
+      <p class="text-itens-footer-two">© 2023 ® <img src="images/icons/svg/Logo-Paco-footer.svg">
+        <Todos class="span-subtitle-footer"> Todos os direitos reservados</Todos>
+      </p>
+      <br><br>
+    </div>
+    </div>
+
+  </section>
+  <!-- Footer end -->
+
+  <!-- Footer end -->
+
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script async defer src="js/cards-planos.js"></script>
+  <script async defer src="js/video.js"></script>
+  <script async defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script async defer src="js/texto_swiper.js"></script>
+  <script async defer src="js/scrollreveal.js"></script>
+  <script async defer src="js/pegar_localizacao.js"></script>
+  <script async defer src="js/cookies.js">
+  </script>
+  <!-- <script async src="js/planos.js"></script> -->
+  <script async defer src="https://kit.fontawesome.com/f43576dca4.js" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    var a = 0
+    $(window).scroll(function() {
+      var oTop = $("#counter").offset().top - window.innerHeight
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $(".counter-value").each(function() {
+          var $this = $(this),
+            countTo = $this.attr("data-count")
+          $({
+            countNum: $this.text(),
+          }).animate({
+              countNum: countTo,
+            },
+
+            {
+              duration: 2000,
+              easing: "swing",
+              step: function() {
+                $this.text(Math.floor(this.countNum))
+              },
+              complete: function() {
+                $this.text(this.countNum)
+                  //alert('finished');
+              },
+            }
+          )
+        })
+        a = 1
+      }
+    })
+  </script>
+</body>
+
+</html>

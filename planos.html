@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo API Externa</title>
+    <style>
+        /* Estilos para o título */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Estilos para a lista de planos */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        /* Estilos para os detalhes do plano */
+        .plan-details {
+            font-weight: bold;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planos Disponíveis</h1>
+    <ul id="plan-list"></ul>
+
+    <script>
+        // Função para buscar e exibir os planos da API
+        async function fetchPlans() {
+            try {
+                const response = await fetch('/api/plans'); 
+                const plans = await response.json();
+                const planList = document.getElementById('plan-list');
+
+                plans.forEach(plan => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <p class="plan-details">ID do Plano: ${plan.id_plano}</p>
+                        <p class="plan-details">Nome: ${plan.name}</p>
+                        <p class="plan-details">Descrição: ${plan.description}</p>
+                        <p class="plan-details">Valor Mínimo: R$ ${parseFloat(plan.min_value).toFixed(2)}</p>
+                        <p class="plan-details">Data: ${plan.date}</p><p class="plan-details">Data: ${plan.date}</p>
+                        <p class="plan-details">Código SIPPulse do Plano: ${plan.sippulse_plan_code}</p>
+                        <p class="plan-details">Cota de Chamadas Móveis: ${plan.mobile_call_quota}</p>
+                        <p class="plan-details">Cota de Chamadas Internacionais: ${plan.international_call_quota}</p>
+                        <p class="plan-details">Valor de Instalação: R$ ${parseFloat(plan.installation_value).toFixed(2)}</p>
+                        <p class="plan-details">Recorrência de Faturamento: ${plan.billing_recurrence} dias</p>
+                        <p class="plan-details">Recorrente: ${plan.bill_recurrent === "1" ? "Sim" : "Não"}</p>
+                        <p class="plan-details">Instalação: ${plan.bill_installation === "1" ? "Sim" : "Não"}</p>
+                        <p class="plan-details">Exibir Afiliado: ${plan.show_affiliate === "1" ? "Sim" : "Não"}</p>
+                        <p class="plan-details">Número de Canais: ${plan.num_channels}</p>
+                        <p class="plan-details">Permitir Portabilidade de Número: ${plan.allow_number_portability === "1" ? "Sim" : "Não"}</p>
+                        `;
+                    planList.appendChild(listItem);
+                });
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Chamando a função para buscar os planos ao carregar a página
+        fetchPlans();
+    </script>
+</body>
+</html>

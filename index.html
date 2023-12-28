@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+  <meta name="description" content="Paco. É SEM Fidelidade, SEM Cobrança Adicional, Nº DE TELEFONE, FIXO ILIMITADO. Saiba Mais. Os Mais Avançados Recursos em Telefonia Digital. Facilidade e Mobilidade para sua Empresa. Ativação em Apenas 10min. Telefonia 100% Digital. Melhores Preços.">
+  <meta property="og:image" content="images/Paco_voa.png">
+  <meta property="og:title" content="Fale Paco">
+  <meta property="og:description" content="Paco. É SEM Fidelidade, SEM Cobrança Adicional, Nº DE TELEFONE, FIXO ILIMITADO. Saiba Mais. Os Mais Avançados Recursos em Telefonia Digital. Facilidade e Mobilidade para sua Empresa. Ativação em Apenas 10min. Telefonia 100% Digital. Melhores Preços.">
+  <meta property="og:url" content="https://falepaco.com.br">
+
+  <!-- Scroll Reveal -->
+  <script async src="https://unpkg.com/scrollreveal"></script>
+
+  <link rel="shortcut icon" href="images/favicon_io/android-chrome-192x192.png">
+  <link rel="shortcut icon" href="images/favicon_io/android-chrome-512x512.png">
+  <link rel="shortcut icon" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="shortcut icon" href="images/favicon_io/favicon-16x16.png">
+  <link rel="shortcut icon" href="images/favicon_io/favicon-32x32.png">
+  <link rel="shortcut icon" href="images/favicon_io/favicon.ico">
+  <title>Fale Paco</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap core CSS ->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!- Magnific popup ->
+  <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
+  <!- Slider ->
+  <link rel="stylesheet" type="text/css" href="css/slide.css" / -->
+  <link rel="stylesheet" type="text/css" href="css/bundle.min.css" />
+  <!-- Custom styles for this template -->
+  <!-- link href="css/menu.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/button.css" rel="stylesheet">
+  <link href="css/cookies.css" rel="stylesheet" -->
+  <!--Template Color-->
+  <link href="css/colors/default.css" rel="stylesheet">
+  <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    /* Estilo para o cabeçalho com vídeo */
+    
+    .logolink {
+      min-height: 10px;
+      position: absolute;
+      margin-left: 170px;
+    }
+    
+    .logolink img {
+      height: 30px !important;
+      margin: 0 !important;
+      animation-name: none !important;
+    }
+    
+    #header {
+      position: relative;
+      width: 100%;
+      height: 615px;
+      /* Altura desejada */
+      overflow: hidden;
+      /* Oculta partes do vídeo que estão fora do cabeçalho */
+      border-bottom: 2px solid #2480be !important;
+      margin-top: 100px !important;
+    }
+    /* Estilo para o vídeo de fundo */
+    
+    #video-background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 1s ease;
+    }
+    
+    .fade-out {
+      opacity: 0;
+    }
+    
+    @media (max-width: 768px) {
+      /* Estilo para o cabeçalho com vídeo */
+      #header {
+        position: relative;
+        display: none;
+        width: 100%;
+        height: 600px;
+        /* Altura desejada */
+        overflow: hidden;
+        /* Oculta partes do vídeo que estão fora do cabeçalho */
+        margin-top: 0px !important;
+      }
+      .video_paco {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .video_paco {
+        display: none !important;
+      }
+    }
+    
+    a {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Menu Mobile fixo no topo -->
+  <header class="menu_mobile">
+    <!-- Imagem à esquerda -->
+    <div class="paco_voa">
+      <a href="index.html"><img src="images/Paco_voa.png" alt="Paco" class="logo-light" height="185px" width="150px"></a>
+    </div>
+    <!-- Botão à direita -->
+    <div class="menu_localizacao_mobile">
+      <!-- Imagem no meio -->
+      <a href="index.html" class="logolink"><img src="images/logos/logo.png" alt="Logo Fale Paco" width="157" height="25"></a>
+      <a href="https://falepaco.com.br/login" aria-label="Minha Fale Paco">
+        <button class="botao_navbar">Minha Fale Paco</button>
+        <!--Nav one-->
+      </a>
+    </div>
+    <div class="cidade_selecionada">
+      <p class="cidade_localizacao_mobile" style="margin-bottom: 0px !important;" id="cityDisplay2">Minha Localização</p>
+      <a id="accept-button-mobile" href="#" aria-label="localizacao"><img class="btn_escolha_cidade" src="images/icons/svg/localizacao.svg" alt="localizacao"></img>
+      </a>
+    </div>
+  </header>
+  <!-- Menu fixo no topo -->
+  <header class="menu">
+    <!-- Imagem à esquerda -->
+    <div class="paco_voa">
+      <a href="index.html"><img src="images/Paco_voa.png" alt="Paco" class="logo-light" height="185px" width="150px"></a>
+    </div>
+    <!-- Imagem no meio -->
+    <a href="index.html" class="logolink"><img src="images/logos/logo.png" alt="Logo Fale Paco"></a>
+    <!-- Botão à direita -->
+    <div class="menu_localizacao">
+      <p class="cidade_localizacao" id="cityDisplay">Minha Localização</p>
+      <a id="accept-button" href="#" aria-label="localizacao"><img class="btn_escolha_cidade" src="images/icons/svg/localizacao.svg" alt="localizacao"></img>
+      </a>
+      <a href="https://falepaco.com.br/login" aria-label="Minha Fale Paco">
+        <button class="botao_navbar">Minha Fale Paco</button>
+        <!--Nav one-->
+      </a>
+    </div>
+  </header>
+  <!-- Final do Menu -->
+
+
+  <!-- Cabeçalho com imagens - mobile  -->
+  <!-- Swiper -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/banner-video/banner1.png" alt="Mulher sorrindo falando no telefone com cliente" width="428" height="611">
+        <div class="slide-text">Inovamos a telefonia para sua empresa falar de qualquer lugar do planeta.</div>
+        <div class="button-container">
+          <a href="#planos" aria-label="Ver planos"><button title="ir para planos" class="button button-ver-planos-mobile" id="ir_planos2" href="#planos"></a>Ver planos
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner-video/banner2.png" alt="Mulher falando no telefone com o cliente" width="428" height="611">
+        <div class="slide-text">Atendimento, mobilidade e economia com a mais completa telefonia em nuvem.</div>
+        <div class="button-container">
+          <a href="#planos" aria-label="Ver planos"><button title="ir para planos" class="button button-ver-planos-mobile" id="ir_planos3" href="#planos"></a>Ver planos
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner-video/banner3.png" alt="Homem de negócios trocando mensagens com o cliente" width="428" height="611">
+        <div class="slide-text">Descomplique o atendimento da sua empresa com a nossa solução de telefonia 100% digital.</div>
+        <div class="button-container">
+          <a href="#planos" aria-label="Ver planos"><button title="ir para planos" class="button button-ver-planos-mobile" id="ir_planos4" href="#planos"></a>Ver planos
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner-video/banner4.png" alt="Vendedora de telefonia negociando por ligação" width="428" height="611">
+        <div class="slide-text">Controle, faça e receba ligações via internet de onde você estiver.</div>
+        <div class="button-container">
+          <a href="#planos" aria-label="Ver planos"><button title="ir para planos" class="button button-ver-planos-mobile" id="ir_planos5" href="#planos"></a>Ver planos
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/banner-video/banner5.png" alt="Empresário satisfeito após ativar a conta da Fale Paco" width="428" height="611">
+        <div class="slide-text">É facil, rápido e seguro, você assina totalmente online e ativa seu telefone em menos de 10 minutos.</div>
+        <div class="button-container">
+          <a href="#planos" aria-label="Ver planos"><button title="ir para planos" class="button button-ver-planos-mobile" id="ir_planos6" href="#planos"></a>Ver planos
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Cabeçalho com vídeo -->
+  <div id="header">
+    <video class="video_paco" id="video-background" autoplay loop muted>
+			<source src="video/mulher_telefone1.mp4" type="video/mp4">
+			Seu navegador não suporta vídeos HTML5.
+		</video>
+    <!-- Texto à esquerda -->
+    <div class="texto_video">
+      <h1 id="text-container">Atendimento, mobilidade e economia<br>com a mais completa telefonia em nuvem.</h1>
+    </div>
+    <!-- Botões à direita -->
+    <div class="button-container">
+      <a href="#planos" aria-label="Ver planos"><button class="button btn-ver-planos" id="ir_planos1" href="#planos">Ver planos</button></a>
+      <a href="https://api.whatsapp.com/send/?phone=551132301682&text&type=phone_number&app_absent=0" target="_blank" aria-label="Fale com o Paco"><button class="button2 btn-fale-com-paco">Fale com o Paco</button></a>
+    </div>
+  </div>
+
+  <script async>
+    const texts = [
+      "Inovamos a telefonia para sua empresa falar<br>de qualquer lugar do planeta.",
+      "Atendimento, mobilidade e economia<br>com a mais completa telefonia em nuvem.",
+      "Descomplique o atendimento da sua empresa<br>com a nossa solução de telefonia 100% digital.",
+      "Controle, faça e receba ligações<br>via internet de onde você estiver.",
+      "É fácil, rápido e seguro, você assina totalmente<br>online e ativa seu telefone em menos de 10 minutos.",
+    ];
+    const textContainer = document.getElementById("text-container");
+    let currentTextIndex = 0;
+
+    // Função para atualizar o texto
+    function updateText() {
+      textContainer.innerHTML = texts[currentTextIndex];
+      currentTextIndex = (currentTextIndex + 1) % texts.length;
+    }
+
+    // Atualize o texto a cada 13 segundos (13000 milissegundos)
+    setInterval(updateText, 10000);
+
+    // Execute a função uma vez ao carregar a página
+    updateText();
+
+    // Verificar se está em dispositivo móvel
+    function isMobile() {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    }
+
+    // Verificar se é um dispositivo móvel e desabilitar a reprodução automática do vídeo
+    if (isMobile()) {
+      const videoElement = document.getElementById("video-background"); // Substitua "seu-video-id" pelo ID do elemento de vídeo
+      videoElement.removeAttribute("autoplay");
+    }
+  </script>
+  <script async>
+    // Adicione eventos de clique a elementos com IDs "ir_planos1" até "ir_planos6"
+    for (let i = 1; i <= 6; i++) {
+      const buttonId = `ir_planos${i}`;
+
+      const buttonElement = document.getElementById(buttonId);
+
+      if (buttonElement) {
+        buttonElement.addEventListener('click', function() {
+          const sectionPlanos = document.getElementById('planos'); // Use o mesmo ID "planos" para todas as seções
+          if (sectionPlanos) {
+            sectionPlanos.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      }
+    }
+  </script>
+  <div class="cookie-popup" id="cookie-popup">
+    <div class="cookie-content">
+      <h2 class="title">Atenção!</h2>
+      <p class="description">Utilizamos "cookies" e "geolocalização" para uma melhor experiência em nosso site.</p>
+      <div class="button-container"></div>
+      <br>
+      <div class="botoes_cookie">
+        <a href="#" class="accept-button" id="accept-button2" aria-label="Aceitar">Aceitar</a>
+        <a href="#" class="close-button" id="close-button" aria-label="Fechar">Fechar</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Two -->
+  <section class="section-two section-cards-destaque" id="destaques">
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <a href="#pesquisa" target="_blank" aria-label="pesquisa">
+            <img src="images/banner-destaques/1.webp" loading="lazy" height="200" width="350" alt="NPS" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#pesquisa" target="_blank" aria-label="pesquisa">
+            <img src="images/banner-destaques/2.webp" loading="lazy" height="200" width="350" alt="Satisfação" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="https://hellopaco.com/" target="_blank" aria-label="hellopaco">
+            <img src="images/banner-destaques/3.webp" loading="lazy" height="200" width="350" alt="Plataforma Hello Paco" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#cobertura" target="_blank" aria-label="cobertura">
+            <img src="images/banner-destaques/4.webp" loading="lazy" height="200" width="350" alt="Cobertura" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="https://www.reclameaqui.com.br/empresa/fale-paco/" target="_blank" aria-label="reclameaqui">
+            <img src="images/banner-destaques/5.webp" loading="lazy" height="200" width="350" alt="Reclame Aqui" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#pesquisa" target="_blank" aria-label="pesquisa">
+            <img src="images/banner-destaques/1.webp" loading="lazy" height="200" width="350" alt="NPS" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#pesquisa" target="_blank" aria-label="pesquisa">
+            <img src="images/banner-destaques/2.webp" loading="lazy" height="200" width="350" alt="Satisfação" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="https://hellopaco.com/" target="_blank" aria-label="hellopaco">
+            <img src="images/banner-destaques/3.webp" loading="lazy" height="200" width="350" alt="Plataforma Hello Paco" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="#cobertura" target="_blank" aria-label="cobertura">
+            <img src="images/banner-destaques/4.webp" loading="lazy" height="200" width="350" alt="Cobertura" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+        <div class="slide">
+          <a href="https://www.reclameaqui.com.br/empresa/fale-paco/" target="_blank" aria-label="reclameaqui">
+            <img src="images/banner-destaques/5.webp" loading="lazy" height="200" width="350" alt="Reclame Aqui" />
+            <span class="slide-info">Saiba mais</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Two End -->
+
+  <!-- Section Three -->
+  <section class="section-three">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-center yellow-line">
+          <h3 class="title-sections" style="margin-bottom: 20px !important;" id="planos">Planos</h3>
+          <div class="texto_aplicativos">
+            Escolha o plano ideal para seu negócio e experimente gratuitamente por 7 dias.
+          </div>
+        </div>
+      </div>
+      <div class="grupo_plano_dropdown" id="planDropdown">
+        <div class="container_btn_planos">
+          <div class="btn_troca_de_plano" id="franquias-button" onclick="showSection('franquias')">Planos Controle</div>
+          <div class="btn_troca_de_plano" id="ilimitados-button" onclick="showSection('ilimitados')">Planos Ilimitados</div>
+        </div>
+      </div>
+      <p class="txt_conheca" id="franquia" style="display: block;">Conheça os planos controle, ideal para a necessidade do seu negócio.</p>
+      <p class="txt_conheca" id="ilimitado" style="display: none;">Conheça os planos ilimitados, ideal para falar a vontade.</p>
+
+      <!-- Inicio planos controle -->
+      <div class="card-container active-card" id="franquias">
+        <div class="card">
+          <h2>Fale Controle 1</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 39,90/mês</h4>
+          <h5>Ramal/Usuário: <b>1</b></h5>
+          <h5>Número Fixo: <b>1</b></h5>
+          <h5>Fixo Brasil: <b>Ilimitado</b></h5>
+          <h5>Móvel Brasil: <b>150 min</b></h5>
+          <h5>Aparelho IP Comodato: <b>0</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+          <p2>Plano controle com 150 minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+
+        <div class="card plano_controle-2 recomendado">
+          <div class="card-header">Mais assinado</div>
+          <h2 class="plano_controle-2_fonte">Fale Controle 2</h2>
+          <h3 class="plano_controle-2_fonte">Teste 7 dias grátis</h3>
+          <p class="plano_controle-2_fonte">Sem fidelidade</p>
+          <h4 class="plano_controle-2_fonte">R$ 69,90/mês</h4>
+          <h5 class="plano_controle-2_fonte">Ramal/Usuário: <b>2</b></h5>
+          <h5 class="plano_controle-2_fonte">Número Fixo: <b>1</b></h5>
+          <h5 class="plano_controle-2_fonte">Fixo Brasil: <b>Ilimitado</b></h5>
+          <h5 class="plano_controle-2_fonte">Móvel Brasil: <b>300 min</b></h5>
+          <h5 class="plano_controle-2_fonte">Aparelho IP Comodato: <b>1</b></h5>
+          <h5 class="plano_controle-2_fonte">Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+
+          <p2 class="plano_controle-2_fonte">Plano controle com 300 minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>
+          <button class="btn_planos plano_controle-2_btn">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Controle 5</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 149,90/mês</h4>
+          <h5>Ramal/Usuário: <b>5</b></h5>
+          <h5>Números Fixos: <b>2</b></h5>
+          <h5>Fixo Brasil: <b>Ilimitado</b></h5>
+          <h5>Móvel Brasil: <b>750 min</b></h5>
+          <h5>Aparelho IP Comodato: <b>2</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+          <p2>Plano controle com 750 minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Controle 10</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 289,90/mês</h4>
+          <h5>Ramal/Usuário: <b>10</b></h5>
+          <h5>Números Fixos: <b>2</b></h5>
+          <h5>Número Móvel: <b>1</b></h5>
+          <h5>Fixo Brasil: <b>Ilimitado</b></h5>
+          <h5>Móvel Brasil: <b>1500 min</b></h5>
+          <h5>Aparelho IP Comodato: <b>3</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <p2>Plano controle com 1500 minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>
+          <button class="btn_planos ">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Controle 15</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 389,90/mês</h4>
+          <h5>Ramal/Usuário: <b>15</b></h5>
+          <h5>Números Fixos: <b>4</b></h5>
+          <h5>Números Móveis: <b>2</b></h5>
+          <h5>Fixo Brasil: <b>Ilimitado</b></h5>
+          <h5>Móvel Brasil: <b>2250 min</b></h5>
+          <h5>Aparelho IP Comodato: <b>5</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <p2>Plano controle com 2250 minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+      </div>
+      <!-- Fim planos mais controle -->
+
+      <!-- Inicio planos ilimitados -->
+      <div class="card-container active-card" id="ilimitados">
+        <div class="card">
+          <h2>Fale Ilimitado 1</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 59,80/mês</h4>
+          <h5>Ramal/Usuário: <b>1</b></h5>
+          <h5>Números Fixos: <b>1</b></h5>
+          <h5>Fixo/Móvel Brasil: <b>Ilimitado</b></h5>
+          <h5>Aparelho IP Comodato: <b>0</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+          <p2>Plano ilimitado com franquia média de 1000 minutos mensais, por ramal.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+
+        <div class="card plano_controle-2 recomendado">
+          <div class="card-header">Mais assinado</div>
+          <h2 class="plano_controle-2_fonte">Fale Ilimitado 2</h2>
+          <h3 class="plano_controle-2_fonte">Teste 7 dias grátis</h3>
+          <p class="plano_controle-2_fonte">Sem fidelidade</p>
+          <h4 class="plano_controle-2_fonte">R$ 109,70/mês</h4>
+          <h5 class="plano_controle-2_fonte">Ramal/Usuário: <b>2</b></h5>
+          <h5 class="plano_controle-2_fonte">Número Fixo: <b>1</b></h5>
+          <h5 class="plano_controle-2_fonte">Fixo/Móvel Brasil: <b>Ilimitado</b></h5>
+          <h5 class="plano_controle-2_fonte">Aparelho IP Comodato: <b>1</b></h5>
+          <h5 class="plano_controle-2_fonte">Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+          <p2 class="plano_controle-2_fonte">Plano ilimitado com franquia média de 1000 minutos mensais, por ramal.</p2>
+          <button class="btn_planos plano_controle-2_btn">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Ilimitado 5</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 249,40/mês</h4>
+          <h5>Ramal/Usuário: <b>5</b></h5>
+          <h5>Números Fixos: <b>2</b></h5>
+          <h5>Fixo/Móvel Brasil: <b>Ilimitado</b></h5>
+          <h5>Aparelho IP Comodato: <b>2</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <h5>&nbsp;</h5>
+          <p2>Plano ilimitado com franquia média de 1000 minutos mensais, por ramal.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Ilimitado 10</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 488,90/mês</h4>
+          <h5>Ramal/Usuário: <b>10</b></h5>
+          <h5>Números Fixos: <b>2</b></h5>
+          <h5>Número Móvel: <b>1</b></h5>
+          <h5>Fixo/Móvel Brasil: <b>Ilimitado</b></h5>
+          <h5>Aparelho IP Comodato: <b>3</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <p2>Plano ilimitado com franquia média de 1000 minutos mensais, por ramal.</p2>
+          <button class="btn_planos ">Experimentar</button>
+        </div>
+
+        <div class="card">
+          <h2>Fale Ilimitado 15</h2>
+          <h3>Teste 7 dias grátis</h3>
+          <p>Sem fidelidade</p>
+          <h4>R$ 688,40/mês</h4>
+          <h5>Ramal/Usuário: <b>15</b></h5>
+          <h5>Números Fixos: <b>4</b></h5>
+          <h5>Números Móveis: <b>2</b></h5>
+          <h5>Fixo/Móvel Brasil: <b>Ilimitado</b></h5>
+          <h5>Aparelho IP Comodato: <b>5</b></h5>
+          <h5>Suporte: <b>24/7</b></h5>
+          <p2>Plano ilimitado com franquia média de 1000 minutos mensais, por ramal.</p2>
+          <button class="btn_planos">Experimentar</button>
+        </div>
+      </div>
+      <!-- Fim planos mais vendidos -->
+
+    </div>
+  </section>
+  <!-- Section Three End -->
+
+  <!-- Section Four -->
+  <section class="section bg-white section-funcionalidades" id="conheca">
+    <div class="container">
+      <div class="yellow-line">
+        <h3 class="title-sections" style="margin-bottom: 20px !important;">Funcionalidades</h3>
+        <div class="texto_aplicativos">Conheça a telefonia digital que conecta você de qualquer aparelho smart, computador ou telefone IP.</div>
+        <div class="row vertical-content ">
+          <div class="col-lg-6 col-md-6">
+            <div><img src="images/bg-section/paco-banner.png" alt="imagem do paco com uma tela de computador" class="img-fluid mx-auto d-block" width="1000" height="196"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Four End -->
+
+  <!-- Section Five -->
+  <section class="section-cards-funcionalidades2">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/transferencia.png" alt="Transferência" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/gravacoes.png" alt="Gravações" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/painel.png" alt="Painel" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/atendimento.png" alt="Atendimento" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/redirecionamento.png" alt="Redirecionamento" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/acompanhamento.png" alt="Acompanhamento" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/ramais.png" alt="Ramais" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/horario.png" alt="Horario" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/grupos.png" alt="Grupos" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/musica.png" alt="Música" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/numero.png" alt="Número" width="451" height="461">
+      </div>
+      <div class="grid-item">
+        <img src="images/icons/svg/conheca/extrato.png" alt="Extrato" width="451" height="461">
+      </div>
+    </div>
+  </section>
+  <!-- Section Five End -->
+
+  <!-- Section Six -->
+  <section class="section section-aplicativos" style="background-color: #f7f7f7; margin-top: 30px;" id="conheca">
+    <div class="container" style="margin-bottom: 60px;">
+      <div class="yellow-line">
+        <h3 class="title-sections" style="margin-bottom: 20px !important;">Aplicativos</h3>
+        <div class="texto_aplicativos">Ative em menos de 10 minutos sem equipamentos, fios ou infraestruturas caras.</div>
+        <div class="row vertical-content ">
+          <div class="downloads">
+            <div class="grid_download">
+              <div class="grid-container_download">
+                <div class="grid-item_download">
+                  <img src="images/icons/svg/android.svg" alt="Android" width="100" height="100">
+                  <p class="texto_plataforma_download">Mobile Android - Google</p>
+                  <a href="https://play.google.com/store/search?q=fale%20paco&c=apps" target="_blank" aria-label="Baixar"><button class="botao_navbar_download">Baixar</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="grid_download">
+              <div class="grid-container_download">
+                <div class="grid-item_download">
+                  <img src="images/icons/svg/ios.svg" alt="Ios" width="100" height="100">
+                  <p class="texto_plataforma_download">Mobile IOS - Apple</p>
+                  <a href="https://play.google.com/store/search?q=fale%20paco&c=apps" target="_blank" aria-label="Baixar"><button class="botao_navbar_download">Baixar</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="grid_download">
+              <div class="grid-container_download">
+                <div class="grid-item_download">
+                  <img src="images/icons/svg/windows.svg" alt="Windows" width="100" height="100">
+                  <p class="texto_plataforma_download">Desktop Windows- Microsoft</p>
+                  <a href="https://play.google.com/store/search?q=fale%20paco&c=apps" target="_blank" aria-label="Baixar"><button class="botao_navbar_download">Baixar</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="grid_download">
+              <div class="grid-container_download">
+                <div class="grid-item_download">
+                  <img src="images/icons/svg/desktopapple.svg" alt="MacOS" width="100" height="100">
+                  <p class="texto_plataforma_download">Desktop MacOS - Apple</p>
+                  <a href="https://play.google.com/store/search?q=fale%20paco&c=apps" target="_blank" aria-label="Baixar"><button class="botao_navbar_download">Baixar</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Six End -->
+
+  <!-- Section Seven -->
+  <section id="questoes" class="section bg-white section-questoes">
+    <div class="container questions-frequently">
+      <div class="row">
+        <div class="col-12 text-center yellow-line">
+          <h3 class="title-sections" style="margin-bottom: 20px !important;">Perguntas frequentes</h3>
+          <div class="texto_aplicativos">Entenda as principais dúvidas do nosso produto e serviço.</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class='question'>
+            <input type='checkbox' id='answer1'>
+            <div class="question-more-arrow">
+              <label class="letter-quiestions">1 - Como funciona a ferramenta?</label>
+              <input type="checkbox" id="question-1" style="display:none">
+              <!-- Adicione um elemento de input oculto -->
+              <label for='answer1' onclick="trocar_1()">
+								<img class="seta-question" id="figura-1" src="images/icons/svg/seta-baixo.svg" alt="Seta para baixo" width="16" height="10">
+							</label>
+            </div>
+            <div class='answer answer-letter'>
+              <br> É muito simples e descomplica o atendimento telefônica da sua empresa!
+              <br><br> Você contrata um número fixo e pode atender ele através de nossos aplicativos, em seu celular, ou<br>computador, utilizando apenas a internet. O plano inclui acesso a uma secretária virtual, onde é possível<br>segmentar o seu atendimento,
+              deixando-o personalizado e ainda mais profissional.
+              <br><br> Nosso principal objetivo é aprimorar a comunicação de sua empresa, promovendo a melhor experiência em<br>solução de atendimento aos nossos clientes.
+              <br>
+            </div>
+          </div>
+          <div class='question'>
+            <input type='checkbox' id='answer2'>
+            <div class="question-more-arrow">
+              <label class="letter-quiestions">2 - O que é ramal?</label>
+              <input type="checkbox" id="question-2" style="display:none">
+              <!-- Adicione um elemento de input oculto -->
+              <label for='answer2' onclick="trocar_2()">
+								<img class="seta-question" id="figura-2" src="images/icons/svg/seta-baixo.svg" alt="Seta para baixo" width="16" height="10">
+							</label>
+            </div>
+            <div class='answer answer-letter'>
+              <br> Ramal ou usuário é o canal que você utilizará para receber e atender as suas ligações.
+              <br>
+            </div>
+          </div>
+          <div class='question'>
+            <input type='checkbox' id='answer3'>
+            <div class="question-more-arrow">
+              <label class="letter-quiestions">3 - Posso fazer portabilidade de um número que já tenho?</label>
+              <input type="checkbox" id="question-3" style="display:none">
+              <!-- Adicione um elemento de input oculto -->
+              <label for='answer3' onclick="trocar_3()">
+								<img class="seta-question" id="figura-3" src="images/icons/svg/seta-baixo.svg" alt="Seta para baixo" width="16" height="10">
+							</label>
+            </div>
+            <div class='answer answer-letter'>
+              <br> Claro!
+              <br>
+              <br> É necessário apenas que seu número seja um número fixo, e que a sua cidade faça parte da nossa cobertura.
+              <br>
+            </div>
+          </div>
+          <div class='question'>
+            <input type='checkbox' id='answer4'>
+            <div class="question-more-arrow">
+              <label class="letter-quiestions">4 - O plano possui fidelidade?</label>
+              <input type="checkbox" id="question-4" style="display:none">
+              <!-- Adicione um elemento de input oculto -->
+              <label for='answer4' onclick="trocar_4()">
+								<img class="seta-question" id="figura-4" src="images/icons/svg/seta-baixo.svg" alt="Seta para baixo" width="16" height="10">
+							</label>
+            </div>
+            <div class='answer answer-letter'>
+              <br> Não!
+              <br>
+              <br> Você fica o tempo que quiser com o contrato ativo.
+              <br>
+              <br> Na Fale Paco queremos que você permaneça por gostar e estar satisfeito com a nossa solução.
+              <br>
+            </div>
+          </div>
+          <div class='question' id="change-color">
+            <input type='checkbox' id='answer5'>
+            <div class="question-more-arrow">
+              <label class="letter-quiestions">5 - Como funciona a instalação?</label>
+              <input type="checkbox" id="question-5" style="display:none">
+              <!-- Adicione um elemento de input oculto -->
+              <label for='answer5' onclick="trocar_5()">
+								<img class="seta-question" id="figura-5" src="images/icons/svg/seta-baixo.svg" alt="Seta para baixo" width="16" height="10">
+							</label>
+            </div>
+            <div class='answer answer-letter'>
+              <br> Fácil, rápida e totalmente descomplicada!
+              <br>
+              <br> Basta instalar nosso aplicativo Fale Paco, criar seu usuário e senha e começar a usar. Simples assim!
+              <br>
+              <br> Você terá acesso a uma ferramenta totalmente intuitiva.
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <div class="base_conhecimento">
+        <div class="col-md-12">
+          <p class=" text-center text-section-six">Descubra mais sobre essa solução de atendimento<br> explorando a nossa base de conhecimento.</p>
+          <div class="btn-card-price">
+            <div class="btn-group btn-card-price-center">
+              <a href="https://suportepaco.com.br/falepaco" class="base-of-meet mt-4" target="_blank" aria-label="Saiba mais">
+                <div class="button-icon-base-of-meet">
+                  <p>Saiba mais</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section Seven End  -->
+
+  <!-- Cookie -->
+  <!-- Footer -->
+  <section class="bg-dark-footer footer" id="contato">
+    <div class="container">
+      <div class="row_footer space-footer">
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Suporte 24/7</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item1"></li>
+                  <li id="item2"><a href="https://api.whatsapp.com/send/?phone=551132301682&text&type=phone_number&app_absent=0" aria-label="Whatsapp (11) 3230.1682"><i class="fa fa-whatsapp" aria-hidden="true"></i> (11) 3230.1682</a></li>
+                  <li id="item1"></li>
+                  <li id="item2"><a href="tel:08000888088" aria-label="Ligação 0800.088.8088"><i class="fa fa-phone" aria-hidden="true"></i> 0800.088.8088</a></li>
+                  <li id="item2"><a href="https://suportepaco.com.br/falepaco" target="_blank" aria-label="Base de conhecimento"><i class="fa fa-book" aria-hidden="true"></i> Base de conhecimento</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Fale conosco</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item2"><a href="mailto:atendimento@falepaco.com.br" aria-label="atendimento@falepaco.com.br">atendimento@falepaco.com.br</a></li>
+                  <li id="item2"><a href="mailto:suporte@falepaco.com.br" aria-label="suporte@falepaco.com.br">suporte@falepaco.com.br</a></li>
+                  <li id="item2"><a href="mailto:marketing@falepaco.com.br" aria-label="marketing@falepaco.com.br">marketing@falepaco.com.br</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Legal</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item2"><a href="termos.html" target="_blank" aria-label="Termos de uso">Termos de uso</a></li>
+                  <li id="item2"><a href="politicas.html" target="_blank" aria-label="Políticas de privacidade">Políticas de privacidade</a></li>
+                  <li id="item2"><a href="regrasip.html" target="_blank" aria-label="Regras para telefone IP">Regras para telefone IP</a></li>
+                  <li id="item2"><a href="cobertura.html" target="_blank" aria-label="Cobertura">Cobertura</a></li>
+                  <li id="item2"><a href="cancelamento.html" target="_blank" aria-label="Cancelamento">Cancelamento</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-lg-4-c">
+          <div class="service-boxed">
+            <div class="service-body">
+              <div class="title-and-icon-footer">
+                <h5>Redes Sociais</h5>
+              </div>
+              <div class="list-itens-footer">
+                <ul class="list-itens-footer-ul">
+                  <li id="item2"><a href="https://www.facebook.com/falepaco" target="_blank" aria-label="Facebook">Facebook</a></li>
+                  <li id="item2"><a href="https://www.instagram.com/falepaco_oficial/" target="_blank" aria-label="Instagram">Instagram</a></li>
+                  <!-- li id="item2"><a href="https://twitter.com/falepacooficial" target="_blank" aria-label="Twitter">Twitter</a></li -->
+                  <li id="item2"><a href="https://www.youtube.com/@falepaco" target="_blank" aria-label="Youtube">Youtube</a></li>
+                  <li id="item2"><a href="https://www.linkedin.com/company/falepacooficial/mycompany/" target="_blank" aria-label="Linkedin">Linkedin</a></li>
+                  <li id="item2"><a href="https://www.tiktok.com/@falepaco" target="_blank" aria-label="TikTok">TikTok</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-dark-footer-2 footer" id="contato">
+    <div class="container">
+      <div class="sufooter">
+      </div>
+    </div>
+    <div class="sub-footer-two">
+      <p class="text-itens-footer-two">
+        © 2023 ® <img src="images/icons/svg/Logo-Paco-footer.svg" loading="lazy" alt="Paco Footer" height="15" width="62">
+        <Todos class="span-subtitle-footer"> Todos os direitos reservados</Todos>
+      </p>
+      <br><br>
+    </div>
+    </div>
+  </section>
+  <!-- Footer end -->
+  <!-- js placed at the end of the document so the pages load faster -->
+  <!-- Swiper JS -->
+  <!-- Início do chat -->
+  <!-- /.scroll-to-top -->
+  <!-- Script de Chat -->
+  <div id="mbz-paco-social-icons" style="position: fixed; bottom: 20px; right: 42px; z-index: 999999;">
+    <ul id="mbz-social-icon-ul" style="list-style: none; padding: 0px; display: none; margin-right: -35px; margin-bottom: 42px;">
+      <li id="mbz-closed-social-icons" style="position: absolute; right: 0px; top: -30px;">
+        <img src="social-icons/closed.svg" alt="closed" style="width: 20px; margin-right: -18px !important;">
+      </li>
+      <li style="margin-bottom: 45px; height: 20px;">
+        <a href="https://wa.me/+551132301682?text=Ol%C3%A1,%20gostaria%20de%20saber%20mais%20sobre%20a%20Fale%20Paco." target="_blank" title="Whatsapp" aria-label="Whatsapp">
+          <img src="social-icons/whatsapp-paco.png" alt="Whatsapp" style="height: 55px;">
+        </a>
+      </li>
+      <li style="margin-bottom: 45px; height: 20px;">
+        <a href="https://www.messenger.com/t/falepaco" target="_blank" title="Facebook" aria-label="Facebook">
+          <img src="social-icons/facebook-paco.png" alt="Facebook" style="height: 55px;">
+        </a>
+      </li>
+      <li style="margin-bottom: 52px; height: 20px;">
+        <a href="https://www.instagram.com/falepacooficial/" target="_blank" title="Instagram" aria-label="Instagram">
+          <img src="social-icons/instagram-paco.png" alt="Instagram" style="height: 55px;">
+        </a>
+      </li>
+    </ul>
+    <div id="mbz-open-social-icons" style="border-radius: 50%; overflow: hidden; margin-right: -40px; margin-bottom: -10px;">
+      <img src="images/icons/svg/mascote.svg" alt="Mascote" style="width: 70px;" width="70" height="70">
+    </div>
+  </div>
+  <div class="p-2 text-white rounded-1" id="mbz-tootip-paco" style="position: fixed; bottom: 30px; right: 90px; z-index: 999999; background-color: #248af7; border-radius: 5px; display: none; line-height: 1;">Caso precise de ajuda, estou aqui 😃</div>
+</body>
+<!-- script async onload="init('2baa6498-920f-4707-af63-0ecfff8eaeeb')" defer async src="https://app.hellopaco.com.br/_widgets/init.js"></script -->
+<!-- 
+		{https://seu-dominio.com} = o endereço do seu site
+		{seu-user} = Seu usuário de rede social
+		{seu-numero} - O número ao qual será direcionado o whatsapp
+		Código do Emoji (caso necessário) - U+1f603
+		
+		Obs.: A pasta “social-icons” você deve inserir na sua pasta de imagens padrão. Usar bootstrap e jQuery!
+		
+		COPIAR O CÓDIGO ABAIXO E INSERIR DENTRO DA TAG BODY DE PREFERÊNCIA NAS ÚLTIMAS LINHAS.
+		TROCAR AS PARTES NECESSÁRIAS PARA INSERÇÃO DESTE CÓDIGO
+		-->
+<!-- script async src="js/questions.js"></script -->
+<!--	<script async src="js/planos.js"></script>-->
+<!--common script for all pages-->
+
+<!-- script async></script -->
+<script>
+  var baseURLPaco = window.location.protocol + "//" + window.location.hostname + "/";
+  const chatAbre = 1;
+
+  $(document).ready(function() {
+    let mbz_open_social_icons = $('#mbz-open-social-icons');
+    let mbz_closed_social_icons = $('#mbz-closed-social-icons');
+    let newEvent;
+
+    let mbz_tooltip_paco = $('#mbz-tootip-paco'); // Selecionar o elemento do tooltip
+
+    // Definir o tooltip como invisível no início
+    mbz_tooltip_paco.hide();
+
+    mbz_open_social_icons.on('mouseenter', function() {
+      mbz_tooltip_paco.show('slow'); // Mostrar o tooltip quando o mouse passar por cima
+    });
+
+    mbz_open_social_icons.on('mouseleave', function() {
+      mbz_tooltip_paco.hide('slow');
+    });
+
+    mbz_open_social_icons.on('click', function() {
+      $(this).slideUp('slow', function() {
+        $('#mbz-paco-social-icons').css({
+          bottom: '80px',
+          right: '42px'
+        });
+        $('#mbz-social-icon-ul').slideDown('slow');
+        console.log("Clique em mbz-open-social-icons");
+      });
+    });
+
+    mbz_closed_social_icons.on('click', function() {
+      $(this).parent().slideUp('slow', function() {
+        $('#mbz-paco-social-icons').css({
+          bottom: '24px',
+          right: '42px'
+        });
+        mbz_open_social_icons.slideDown('slow');
+        console.log("Clique em mbz-closed-social-icons");
+
+        //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
+      });
+    });
+
+
+
+    newEvent = new Event('message');
+
+    setTimeout(() => {
+      //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
+    }, 3000);
+
+    if (window.location.href == baseURLPaco && chatAbre == 1) {
+      setTimeout(() => {
+        setTimeout(() => {
+          $('#mbz-open-social-icons').trigger('click');
+        }, 5000);
+        window.dispatchEvent(newEvent);
+      }, 10000);
+    }
+  });
+</script>
+<!-- Swiper JS -->
+<script src="js/swiper-bundle.min.js"></script>
+<script async>
+  // Inicialize o Swiper com autoplay
+  var swiper = new Swiper('.swiper-container', {
+    autoplay: {
+      delay: 3500 // Mude a cada 1000 milissegundos (1 segundo)
+    },
+    loop: true, // Se você quiser que o swiper faça um loop
+    on: {
+      slideChange: function() {
+        // Obtém o índice do slide atual
+        var currentIndex = swiper.realIndex; // Use 'realIndex' para um índice baseado em zero
+
+        // Seleciona o elemento de texto e atualiza seu conteúdo
+        var slideTextElement = document.querySelector('.slide-text');
+      },
+    },
+  });
+</script>
+<script async>
+  // Função para mostrar a seção e atualizar os botões
+  function showSection(sectionId) {
+    // Oculta todas as seções de cartões
+    document.querySelectorAll(".card-container").forEach(function(element) {
+      element.classList.remove("active-card");
+    });
+
+    // Remove a classe "selected-button" de todos os botões
+    document.querySelectorAll(".btn_troca_de_plano").forEach(function(element) {
+      element.classList.remove("selected-button");
+    });
+
+    // Mostra a seção selecionada
+    document.getElementById(sectionId).classList.add("active-card");
+
+    // Adiciona a classe "selected-button" ao botão correspondente
+    document.getElementById(sectionId + "-button").classList.add("selected-button");
+  }
+
+  // Inicialmente, mostramos a seção "Mais vendidos" (padrão)
+  showSection('franquias');
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/js/cache.js')
+      .then(registration => console.log('Service Worker registrado com sucesso:', registration))
+      .catch(error => console.error('Erro ao registrar Service Worker:', error));
+  }
+</script>
+<!-- script src="https://code.jquery.com/jquery-3.6.0.min.js"></script -->
+<script async defer src="js/bundle.js"></script>
+<!-- script async defer src="js/cards-planos.js"></script>
+<script async defer src="js/video.js"></script>
+<script async defer src="js/texto_swiper.js"></script>
+<script async defer src="js/pegar_localizacao.js"></script>
+<script async defer src="js/cookies.js"></script -->
+<!-- <script async src="js/planos.js"></script> -->
+<script async defer src="https://kit.fontawesome.com/f43576dca4.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+  (function(c, l, a, r, i, t, y) {
+    c[a] = c[a] || function() {
+      (c[a].q = c[a].q || []).push(arguments)
+    };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "jxnuyx0gpr");
+</script>
+
+</html>

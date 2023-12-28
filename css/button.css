@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+
+  padding: 0;
+}
+
+.btn-card-price {
+  margin-right: auto;
+  display: contents;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+button {
+  font-family: inherit;
+  accent-color: #2480be;
+  display: inline-block;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin: 8px;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 110px;
+  width: 500px;
+  border-radius: 50%;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+
+.button-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+}
+
+.button-group::before {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #2480be;
+  border-color: #2480be;
+}
+
+input {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 0px !important;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  button {
+    font-family: inherit;
+    accent-color: #2480be;
+    display: inline-block;
+    max-width: 100%;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(#333);
+    transition: color 0.5s;
+    z-index: 1;
+    border-radius: 30px;
+    font-weight: 500;
+    color: var(#fff);
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 0px !important;
+    cursor: pointer;
+  }
+}
+@media (min-width: 250px) and (max-width: 749px) {
+  label {
+    font-size: 12px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 1) {
+  button {
+    max-width: 220px;
+    align-items: center;
+  }
+
+  label {
+    font-size: 9px;
+    max-width: 200px;
+  }
+}
+
+  /* Estilo para os botões */
+  .button-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.button {
+    background-color: #fff;
+    color: 333;
+    height: 70px;
+    max-width: 250px;
+    width: 300px;
+    border-radius: 250px;
+    border: none;
+    bottom: 35px;
+    right: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #2480be;
+    color: #fff;
+    height: 70px;
+    max-width: 250px;
+    border-radius: 250px;
+    border: none;
+    bottom: 35px;
+    right: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button2 {
+    background-color: transparent; /* Fundo transparente para o estilo "outlined" */
+    color: #fff; /* Cor do texto */
+    border: 2px solid #fff; /* Borda contornada */
+    border-radius: 250px;
+    padding: 5px 20px;
+    max-width: 250px;
+    bottom: 35px;
+    width: 300px;
+    right: 40px;
+    height: 70px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.button3 {
+  margin-top: 10px;
+  background-color: transparent; /* Fundo transparente para o estilo "outlined" */
+  color: #2480be; /* Cor do texto */
+  border: 2px solid #2480be; /* Borda contornada */
+  border-radius: 250px;
+  max-width: 250px;
+  height: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+  .button3:hover {
+      background-color: #2480be;
+      color: #fff;
+      height: 70px;
+      max-width: 250px;
+      border-radius: 250px;
+      border: none;
+      bottom: 35px;
+      right: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+.botao_navbar{
+  background-color: transparent; /* Fundo transparente para o estilo "outlined" */
+  color: #2480be; /* Cor do texto */
+  border: 1px solid #2480be; /* Borda contornada */
+  border-radius: 250px;
+  min-width: 80px;
+  font-size: 12px;
+  max-width: 130px;
+  width: 200px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.botao_navbar:hover{
+  background-color: #2480be; /* Fundo transparente para o estilo "outlined" */
+  color: #fff; /* Cor do texto */
+  border: 2px solid #2480be; /* Borda contornada */
+  border-radius: 250px;
+  min-width: 80px;
+  font-size: 12px;
+  max-width: 130px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+  
+
+.botao_navbar_download {
+  background-color: transparent; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border: 2px solid #fff; /* Remover a borda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70px;
+  font-weight: 300;
+  max-height: 30px;
+  border-radius: 30px; /* Cantos arredondados */
+  padding: 20px 40px; /* Espaçamento interno (altura x largura) */
+  font-size: 12px; /* Tamanho da fonte */
+  cursor: pointer; /* Ícone de cursor de apontador ao passar o mouse */
+}
+
+.botao_navbar_download:hover {
+  background-color: #fff; /* Cor de fundo */
+  color: #2480be; /* Cor do texto */
+  border: 2px solid #2480be; /* Remover a borda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70px;
+  font-weight: 300;
+  max-height: 30px;
+  border-radius: 30px; /* Cantos arredondados */
+  padding: 20px 40px; /* Espaçamento interno (altura x largura) */
+  font-size: 12px; /* Tamanho da fonte */
+  text-decoration: none;
+  cursor: pointer; /* Ícone de cursor de apontador ao passar o mouse */
+}
+
+/* Estilo ao passar o mouse (hover) */
+.botao_navbar_download:hover {
+  background-color: #555; /* Cor de fundo ao passar o mouse */
+  color: #fff; /* Cor do texto ao passar o mouse */
+  text-decoration: none;
+}
+
+.btn_precos_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* Estilo para o texto em dispositivos móveis */
+@media (max-width: 768px) {
+           
+  .button:hover {
+      color: #333 !important;
+      height: 40px !important;
+      background-color: #fff !important;
+      min-width: none;
+      max-width: 200px !important;
+      border-radius: 250px;
+      max-width: auto !important;
+      border: none;
+      bottom: 35px;
+      right: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+  .button2:hover {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 250px;
+      max-width: 200px;
+      bottom: 35px;
+      right: 40px;
+      height: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  .button-container {
+    margin-top: 10px;
+    display: flex;
+    /* flex-flow: column; */
+    justify-content: flex-start;
+    right: 0;
+    left: 0;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 50px;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.button {
+    font-size: 16px;
+    height: 60px;
+    max-width: 200px;
+}
+.button2 {
+    font-size: 16px;
+    height: 60px;
+    max-width: 200px;
+    padding-bottom: 10px;
+    padding: 0px 0px;
+}
+
+}
+
+
+        /* Estilo para os botões */
+        .button-container {
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      .button-ver-planos-mobile {
+        background-color: #fff;
+        color: 333;
+        height: 40px;
+        max-width: 200px;
+        border-radius: 250px;
+        border: none;
+        bottom: 35px;
+        margin-left: 0px;
+        right: 40px;
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+
+    .button-ver-planos-mobile:active {
+      background-color: #fff;
+      color: 333;
+      height: 40px;
+      max-width: 200px;
+      border-radius: 250px;
+      border: none;
+      bottom: 35px;
+      margin-left: 0px;
+      right: 40px;
+      margin-right: 5px;
+      cursor: pointer;
+      font-size: 12px;
+  }
+
+  
+  .button-ver-planos-mobile:hover {
+    background-color: #fff;
+    color: 333;
+    height: 40px;
+    max-width: 200px;
+    border-radius: 250px;
+    border: none;
+    bottom: 35px;
+    margin-left: 0px;
+    right: 40px;
+    margin-right: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+  
+    
