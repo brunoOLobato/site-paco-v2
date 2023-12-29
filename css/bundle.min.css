@@ -13320,14 +13320,13 @@ a {
     margin-right: 5px!important
   }
   .menu_localizacao_mobile {
-    flex-direction: column;
+    width: 90%;
     display: flex;
-    justify-content: baseline;
+    justify-content: space-between;
     gap: 10px;
     align-items: center;
     color: #333;
     padding-top: 10px;
-    flex-direction: column;
   }
   .cidade_localizacao_mobile,
   .menu_mobile {
