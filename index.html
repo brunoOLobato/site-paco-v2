@@ -895,158 +895,160 @@
     </div>
   </div>
   <div class="p-2 text-white rounded-1" id="mbz-tootip-paco" style="position: fixed; bottom: 30px; right: 90px; z-index: 999999; background-color: #248af7; border-radius: 5px; display: none; line-height: 1;">Caso precise de ajuda, estou aqui 😃</div>
-</body>
-<!-- script async onload="init('2baa6498-920f-4707-af63-0ecfff8eaeeb')" defer async src="https://app.hellopaco.com.br/_widgets/init.js"></script -->
-<!-- 
-		{https://seu-dominio.com} = o endereço do seu site
-		{seu-user} = Seu usuário de rede social
-		{seu-numero} - O número ao qual será direcionado o whatsapp
-		Código do Emoji (caso necessário) - U+1f603
-		
-		Obs.: A pasta “social-icons” você deve inserir na sua pasta de imagens padrão. Usar bootstrap e jQuery!
-		
-		COPIAR O CÓDIGO ABAIXO E INSERIR DENTRO DA TAG BODY DE PREFERÊNCIA NAS ÚLTIMAS LINHAS.
-		TROCAR AS PARTES NECESSÁRIAS PARA INSERÇÃO DESTE CÓDIGO
-		-->
-<!-- script async src="js/questions.js"></script -->
-<!--	<script async src="js/planos.js"></script>-->
-<!--common script for all pages-->
+  <!-- script async onload="init('2baa6498-920f-4707-af63-0ecfff8eaeeb')" defer async src="https://app.hellopaco.com.br/_widgets/init.js"></script -->
+  <!-- 
+      {https://seu-dominio.com} = o endereço do seu site
+      {seu-user} = Seu usuário de rede social
+      {seu-numero} - O número ao qual será direcionado o whatsapp
+      Código do Emoji (caso necessário) - U+1f603
+      
+      Obs.: A pasta “social-icons” você deve inserir na sua pasta de imagens padrão. Usar bootstrap e jQuery!
+      
+      COPIAR O CÓDIGO ABAIXO E INSERIR DENTRO DA TAG BODY DE PREFERÊNCIA NAS ÚLTIMAS LINHAS.
+      TROCAR AS PARTES NECESSÁRIAS PARA INSERÇÃO DESTE CÓDIGO
+      -->
+  <!-- script async src="js/questions.js"></script -->
+  <!--	<script async src="js/planos.js"></script>-->
+  <!--common script for all pages-->
 
-<!-- script async></script -->
-<script>
-  var baseURLPaco = window.location.protocol + "//" + window.location.hostname + "/";
-  const chatAbre = 1;
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  $(document).ready(function() {
-    let mbz_open_social_icons = $('#mbz-open-social-icons');
-    let mbz_closed_social_icons = $('#mbz-closed-social-icons');
-    let newEvent;
+  <!-- script async></script -->
+  <script>
+    var baseURLPaco = window.location.protocol + "//" + window.location.hostname + "/";
+    const chatAbre = 1;
 
-    let mbz_tooltip_paco = $('#mbz-tootip-paco'); // Selecionar o elemento do tooltip
+    jQuery(document).ready(function() {
+      let mbz_open_social_icons = $('#mbz-open-social-icons');
+      let mbz_closed_social_icons = $('#mbz-closed-social-icons');
+      let newEvent;
 
-    // Definir o tooltip como invisível no início
-    mbz_tooltip_paco.hide();
+      let mbz_tooltip_paco = $('#mbz-tootip-paco'); // Selecionar o elemento do tooltip
 
-    mbz_open_social_icons.on('mouseenter', function() {
-      mbz_tooltip_paco.show('slow'); // Mostrar o tooltip quando o mouse passar por cima
-    });
+      // Definir o tooltip como invisível no início
+      mbz_tooltip_paco.hide();
 
-    mbz_open_social_icons.on('mouseleave', function() {
-      mbz_tooltip_paco.hide('slow');
-    });
-
-    mbz_open_social_icons.on('click', function() {
-      $(this).slideUp('slow', function() {
-        $('#mbz-paco-social-icons').css({
-          bottom: '80px',
-          right: '42px'
-        });
-        $('#mbz-social-icon-ul').slideDown('slow');
-        console.log("Clique em mbz-open-social-icons");
+      mbz_open_social_icons.on('mouseenter', function() {
+        mbz_tooltip_paco.show('slow'); // Mostrar o tooltip quando o mouse passar por cima
       });
-    });
 
-    mbz_closed_social_icons.on('click', function() {
-      $(this).parent().slideUp('slow', function() {
-        $('#mbz-paco-social-icons').css({
-          bottom: '24px',
-          right: '42px'
-        });
-        mbz_open_social_icons.slideDown('slow');
-        console.log("Clique em mbz-closed-social-icons");
-
-        //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
+      mbz_open_social_icons.on('mouseleave', function() {
+        mbz_tooltip_paco.hide('slow');
       });
-    });
+
+      mbz_open_social_icons.on('click', function() {
+        $(this).slideUp('slow', function() {
+          $('#mbz-paco-social-icons').css({
+            bottom: '80px',
+            right: '42px'
+          });
+          $('#mbz-social-icon-ul').slideDown('slow');
+          console.log("Clique em mbz-open-social-icons");
+        });
+      });
+
+      mbz_closed_social_icons.on('click', function() {
+        $(this).parent().slideUp('slow', function() {
+          $('#mbz-paco-social-icons').css({
+            bottom: '24px',
+            right: '42px'
+          });
+          mbz_open_social_icons.slideDown('slow');
+          console.log("Clique em mbz-closed-social-icons");
+
+          //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
+        });
+      });
 
 
 
-    newEvent = new Event('message');
+      newEvent = new Event('message');
 
-    setTimeout(() => {
-      //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
-    }, 3000);
-
-    if (window.location.href == baseURLPaco && chatAbre == 1) {
       setTimeout(() => {
+        //$('#mbz-tootip-paco').show('slow'); // Remova esta linha
+      }, 3000);
+
+      if (window.location.href == baseURLPaco && chatAbre == 1) {
         setTimeout(() => {
-          $('#mbz-open-social-icons').trigger('click');
-        }, 5000);
-        window.dispatchEvent(newEvent);
-      }, 10000);
-    }
-  });
-</script>
-<!-- Swiper JS -->
-<script src="js/swiper-bundle.min.js"></script>
-<script async>
-  // Inicialize o Swiper com autoplay
-  var swiper = new Swiper('.swiper-container', {
-    autoplay: {
-      delay: 3500 // Mude a cada 1000 milissegundos (1 segundo)
-    },
-    loop: true, // Se você quiser que o swiper faça um loop
-    on: {
-      slideChange: function() {
-        // Obtém o índice do slide atual
-        var currentIndex = swiper.realIndex; // Use 'realIndex' para um índice baseado em zero
-
-        // Seleciona o elemento de texto e atualiza seu conteúdo
-        var slideTextElement = document.querySelector('.slide-text');
+          setTimeout(() => {
+            $('#mbz-open-social-icons').trigger('click');
+          }, 5000);
+          window.dispatchEvent(newEvent);
+        }, 10000);
+      }
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+  <script async>
+    // Inicialize o Swiper com autoplay
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: {
+        delay: 3500 // Mude a cada 1000 milissegundos (1 segundo)
       },
-    },
-  });
-</script>
-<script async>
-  // Função para mostrar a seção e atualizar os botões
-  function showSection(sectionId) {
-    // Oculta todas as seções de cartões
-    document.querySelectorAll(".card-container").forEach(function(element) {
-      element.classList.remove("active-card");
+      loop: true, // Se você quiser que o swiper faça um loop
+      on: {
+        slideChange: function() {
+          // Obtém o índice do slide atual
+          // var currentIndex = swiper.realIndex; // Use 'realIndex' para um índice baseado em zero
+
+          // Seleciona o elemento de texto e atualiza seu conteúdo
+          var slideTextElement = document.querySelector('.slide-text');
+        },
+      },
     });
+  </script>
+  <script async>
+    // Função para mostrar a seção e atualizar os botões
+    function showSection(sectionId) {
+      // Oculta todas as seções de cartões
+      document.querySelectorAll(".card-container").forEach(function(element) {
+        element.classList.remove("active-card");
+      });
 
-    // Remove a classe "selected-button" de todos os botões
-    document.querySelectorAll(".btn_troca_de_plano").forEach(function(element) {
-      element.classList.remove("selected-button");
-    });
+      // Remove a classe "selected-button" de todos os botões
+      document.querySelectorAll(".btn_troca_de_plano").forEach(function(element) {
+        element.classList.remove("selected-button");
+      });
 
-    // Mostra a seção selecionada
-    document.getElementById(sectionId).classList.add("active-card");
+      // Mostra a seção selecionada
+      document.getElementById(sectionId).classList.add("active-card");
 
-    // Adiciona a classe "selected-button" ao botão correspondente
-    document.getElementById(sectionId + "-button").classList.add("selected-button");
-  }
+      // Adiciona a classe "selected-button" ao botão correspondente
+      document.getElementById(sectionId + "-button").classList.add("selected-button");
+    }
 
-  // Inicialmente, mostramos a seção "Mais vendidos" (padrão)
-  showSection('franquias');
-</script>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/js/cache.js')
-      .then(registration => console.log('Service Worker registrado com sucesso:', registration))
-      .catch(error => console.error('Erro ao registrar Service Worker:', error));
-  }
-</script>
-<!-- script src="https://code.jquery.com/jquery-3.6.0.min.js"></script -->
-<script async defer src="js/bundle.js"></script>
-<!-- script async defer src="js/cards-planos.js"></script>
-<script async defer src="js/video.js"></script>
-<script async defer src="js/texto_swiper.js"></script>
-<script async defer src="js/pegar_localizacao.js"></script>
-<script async defer src="js/cookies.js"></script -->
-<!-- <script async src="js/planos.js"></script> -->
-<script async defer src="https://kit.fontawesome.com/f43576dca4.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  (function(c, l, a, r, i, t, y) {
-    c[a] = c[a] || function() {
-      (c[a].q = c[a].q || []).push(arguments)
-    };
-    t = l.createElement(r);
-    t.async = 1;
-    t.src = "https://www.clarity.ms/tag/" + i;
-    y = l.getElementsByTagName(r)[0];
-    y.parentNode.insertBefore(t, y);
-  })(window, document, "clarity", "script", "jxnuyx0gpr");
-</script>
+    // Inicialmente, mostramos a seção "Mais vendidos" (padrão)
+    showSection('franquias');
+  </script>
+  <script>
+    /*if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/js/cache.js')
+            .then(registration => console.log('Service Worker registrado com sucesso:', registration))
+            .catch(error => console.error('Erro ao registrar Service Worker:', error));
+        }*/
+  </script>
+  <!-- script src="https://code.jquery.com/jquery-3.6.0.min.js"></script -->
+  <script async defer src="js/bundle.js"></script>
+  <!-- script async defer src="js/cards-planos.js"></script>
+  <script async defer src="js/video.js"></script>
+  <script async defer src="js/texto_swiper.js"></script>
+  <script async defer src="js/pegar_localizacao.js"></script>
+  <script async defer src="js/cookies.js"></script -->
+  <!-- <script async src="js/planos.js"></script> -->
+  <script async defer src="https://kit.fontawesome.com/f43576dca4.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    (function(c, l, a, r, i, t, y) {
+      c[a] = c[a] || function() {
+        (c[a].q = c[a].q || []).push(arguments)
+      };
+      t = l.createElement(r);
+      t.async = 1;
+      t.src = "https://www.clarity.ms/tag/" + i;
+      y = l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "jxnuyx0gpr");
+  </script>
+</body>
 
 </html>
