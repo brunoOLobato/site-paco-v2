@@ -59,6 +59,19 @@
       animation-name: none !important;
     }
     
+    @media (max-width: 768px) {
+      .logolink {
+        height: auto;
+        position: relative;
+        margin-left: 0;
+      }
+      .logolink img {
+        height: 25px !important;
+        margin: 0 !important;
+        animation-name: none !important;
+      }
+    }
+    
     #header {
       position: relative;
       width: 100%;
@@ -820,7 +833,7 @@
                   <li id="item2"><a href="termos.html" target="_blank" aria-label="Termos de uso">Termos de uso</a></li>
                   <li id="item2"><a href="politicas.html" target="_blank" aria-label="Políticas de privacidade">Políticas de privacidade</a></li>
                   <li id="item2"><a href="regrasip.html" target="_blank" aria-label="Regras para telefone IP">Regras para telefone IP</a></li>
-                  <li id="item2"><a href="cobertura.html" target="_blank" aria-label="Cobertura">Cobertura</a></li>
+                  <!--li id="item2"><a href="cobertura.html" target="_blank" aria-label="Cobertura">Cobertura</a></li-->
                   <li id="item2"><a href="cancelamento.html" target="_blank" aria-label="Cancelamento">Cancelamento</a></li>
                 </ul>
               </div>
@@ -1023,10 +1036,10 @@
   </script>
   <script>
     /*if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/js/cache.js')
-            .then(registration => console.log('Service Worker registrado com sucesso:', registration))
-            .catch(error => console.error('Erro ao registrar Service Worker:', error));
-        }*/
+                      navigator.serviceWorker.register('/js/cache.js')
+                        .then(registration => console.log('Service Worker registrado com sucesso:', registration))
+                        .catch(error => console.error('Erro ao registrar Service Worker:', error));
+                    }*/
   </script>
   <!-- script src="https://code.jquery.com/jquery-3.6.0.min.js"></script -->
   <script async defer src="js/bundle.js"></script>
