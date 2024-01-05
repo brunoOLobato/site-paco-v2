@@ -31,7 +31,39 @@ document.addEventListener("DOMContentLoaded", function() {
   // Inicialmente, mostramos a seção "Mais vendidos" (padrão)
   showSection('franquia');
 });
+
 /* cards-planos.js */
+var urlApiErp = '';
+var token = '';
+var planosSite = [];
+
+fetch('arquivo.json')
+  .then(response => response.json())
+  .then(data => {
+    urlApiErp = data.urlApiErp;
+    token = data.token;
+
+    fetch(`${urlApiErp}planos?TOKEN=${token}`)
+      .then(response => response.json())
+      .then(data => {
+      //  console.log(data);
+        data.forEach(element => {
+          if(element.MOSTRAR_SITE == 1) {
+            planosSite.push({
+              "codigoPlano": element.CODIGO,
+              "nomePlano": element.NOME
+            });
+          }
+        });
+
+      })
+
+      .catch(error => console.error('Erro ao ler o arquivo:', error));
+
+  })
+  .catch(error => console.error('Erro ao ler o arquivo:', error));
+
+console.log(planosSite);
 
 /* video.js */
 const videos = ["video/mulher_telefone1.mp4", "video/garota_telefone.mp4", "video/homem_telefone.mp4", "video/mulher_telefone.mp4", "video/homem_business.mp4"];
