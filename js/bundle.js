@@ -33,29 +33,152 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* cards-planos.js */
+const containerFranquias = document.getElementById('franquias');
+
+function cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato) {
+  
+  let linhaNumeroMovel;
+
+  if(qtdNumerosMoveis > 0) {
+    linhaNumeroMovel = `<h5>Números Móveis: <b>${qtdNumerosMoveis}</b></h5>`;
+  } else {
+    linhaNumeroMovel = '';
+  }
+
+  arrayCardsPlanos.push( 
+    "<div class='card'>"
+      +`<h2>${nomePlano}</h2>`
+      +"<h3>Teste 2 dias grátis</h3>"
+      +"<p>Sem fidelidade</p>"
+      +`<h4>R$ ${valorPlano}/mês</h4>`
+      +`<h5>Ramal/Usuário: <b>${qtdRamais}</b></h5>`
+      +`<h5>Número Fixo: <b>${qtdNumerosFixos}</b></h5>`
+      +linhaNumeroMovel
+      +"<h5>Fixo Brasil: <b>Ilimitado</b></h5>"
+      +`<h5>Móvel Brasil: <b>${qtdMinutos} min</b></h5>`
+      +`<h5>Aparelho IP Comodato: <b>${qtdAparelhosComodato}</b></h5>`
+      +"<h5>Suporte: <b>24/7</b></h5>"
+      +"<h5>&nbsp;</h5>"
+      +`<p2>Plano controle com ${qtdMinutos} minutos de franquia para móvel mensal, dividida entre o grupo de ramais.</p2>`
+      +`<a class='btn_planos' href='${urlApiSite}identificacao/email-plano/${codPlano}'>Experimentar</a>`
+    +"</div>");
+};
+
+function preencherCardsFranquia(planosSite, time){
+
+  let codPlano;
+  let nomePlano;
+  let valorPlano;
+  let qtdRamais;
+  let qtdNumerosFixos;
+  let qtdNumerosMoveis;
+  let qtdMinutos;
+  let qtdAparelhosComodato;
+
+  setTimeout(() => {
+    for (let element of planosSite) {
+  
+      codPlano = element.codigoPlano;
+      nomePlano = element.nomePlano;
+      valorPlano = Number(element.valor).toFixed(2);
+      
+      if(element.codigoPlano == '239'){
+    
+          qtdRamais = 1;
+          qtdNumerosFixos = 1;
+          qtdNumerosMoveis = 0;
+          qtdMinutos = 150;
+          qtdAparelhosComodato = 0;
+          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+      }
+        
+      if(element.codigoPlano == '240'){
+    
+          qtdRamais = 2;
+          qtdNumerosFixos = 1;
+          qtdNumerosMoveis = 0;
+          qtdMinutos = 300;
+          qtdAparelhosComodato = 1;
+          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+      }
+    
+      if(element.codigoPlano == '241'){
+    
+          qtdRamais = 5;
+          qtdNumerosFixos = 2;
+          qtdNumerosMoveis = 0;
+          qtdMinutos = 750;
+          qtdAparelhosComodato = 2;
+          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+      }
+    
+      if(element.codigoPlano ==  '242'){
+    
+          qtdRamais = 10;
+          qtdNumerosFixos = 2;
+          qtdNumerosMoveis = 1;
+          qtdMinutos = 1500;
+          qtdAparelhosComodato = 3;
+          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+      }
+    
+      if(element.codigoPlano ==  '243'){
+    
+          qtdRamais = 15;
+          qtdNumerosFixos = 4;
+          qtdNumerosMoveis = 2;
+          qtdMinutos = 2250;
+          qtdAparelhosComodato = 5;
+          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+      }
+  
+    }
+  
+    console.log(arrayCardsPlanos);
+    arrayCardsPlanos.forEach(element => {
+        $('#franquias').append(element);
+    });
+  }, time);
+}
+
+
 var urlApiErp = '';
 var token = '';
+var urlApiSite = '';
 var planosSite = [];
+var planosLocalStorage = localStorage.getItem('planosSite');
+var arrayCardsPlanos = [];
 
-fetch('arquivo.json')
+if(planosLocalStorage) {
+
+  planosSite = JSON.parse(planosLocalStorage);
+  preencherCardsFranquia(planosSite, 1000);
+
+} else {
+
+  fetch('arquivo.json')
   .then(response => response.json())
   .then(data => {
     urlApiErp = data.urlApiErp;
     token = data.token;
+    urlApiSite = data.urlApiSite;
 
     fetch(`${urlApiErp}planos?TOKEN=${token}`)
       .then(response => response.json())
       .then(data => {
-      //  console.log(data);
+     
         data.forEach(element => {
           if(element.MOSTRAR_SITE == 1) {
+
             planosSite.push({
-              "codigoPlano": element.CODIGO,
-              "nomePlano": element.NOME
+              codigoPlano: element.CODIGO,
+              nomePlano: element.NOME,
+              valor: element.VALOR
             });
           }
         });
 
+        localStorage.setItem('planosSite', JSON.stringify(planosSite));
       })
 
       .catch(error => console.error('Erro ao ler o arquivo:', error));
@@ -63,7 +186,8 @@ fetch('arquivo.json')
   })
   .catch(error => console.error('Erro ao ler o arquivo:', error));
 
-console.log(planosSite);
+  preencherCardsFranquia(planosSite, 3000);
+}
 
 /* video.js */
 const videos = ["video/mulher_telefone1.mp4", "video/garota_telefone.mp4", "video/homem_telefone.mp4", "video/mulher_telefone.mp4", "video/homem_business.mp4"];
