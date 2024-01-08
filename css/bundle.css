@@ -14054,6 +14054,7 @@ a {
     align-items: center;
     color: #333;
     padding-top: 10px;
+    flex-direction: column;
   }
   .cidade_localizacao {
     display: none;
@@ -15567,3 +15568,5 @@ label {
 
 
 /* cookies.css */
+
+.menu_localizacao_mobile {}
