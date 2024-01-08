@@ -88,7 +88,7 @@ function cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos,
     +"</div>");
 };
 
-function preencherCardsFranquia(planosSite, time){
+function preencherCardsFranquia(planosSite){
 
   let codPlano;
   let nomePlano;
@@ -99,124 +99,113 @@ function preencherCardsFranquia(planosSite, time){
   let qtdMinutos;
   let qtdAparelhosComodato;
 
-  setTimeout(() => {
-    for (let element of planosSite) {
-  
-      codPlano = element.codigoPlano;
-      nomePlano = element.nomePlano;
-      valorPlano = element.valor;
+  for (let element of planosSite) {
 
-      switch (element.codigoPlano) {
+    codPlano = element.codigoPlano;
+    nomePlano = element.nomePlano;
+    valorPlano = element.valor;
 
-        case '239':
-          qtdRamais = 1;
-          qtdNumerosFixos = 1;
-          qtdNumerosMoveis = 0;
-          qtdMinutos = 150;
-          qtdAparelhosComodato = 0;
-          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
-          break;
-
-        case '240':
-          qtdRamais = 2;
-          qtdNumerosFixos = 1;
-          qtdNumerosMoveis = 0;
-          qtdMinutos = 300;
-          qtdAparelhosComodato = 1;
-          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
-          break;
-
-        case '241':
-          qtdRamais = 5;
-          qtdNumerosFixos = 2;
-          qtdNumerosMoveis = 0;
-          qtdMinutos = 750;
-          qtdAparelhosComodato = 2;
-          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
-          break;
-
-        case '242':
-          qtdRamais = 10;
-          qtdNumerosFixos = 2;
-          qtdNumerosMoveis = 1;
-          qtdMinutos = 1500;
-          qtdAparelhosComodato = 3;
-          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
-          break;
-
-        case '243':
-          qtdRamais = 15;
-          qtdNumerosFixos = 4;
-          qtdNumerosMoveis = 2;
-          qtdMinutos = 2250;
-          qtdAparelhosComodato = 5;
-          cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
-          break;
-      }
+    switch (element.codigoPlano) {
       
+      case '239':
+        qtdRamais = 1;
+        qtdNumerosFixos = 1;
+        qtdNumerosMoveis = 0;
+        qtdMinutos = 150;
+        qtdAparelhosComodato = 0;
+        cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+        break;
+
+      case '240':
+        qtdRamais = 2;
+        qtdNumerosFixos = 1;
+        qtdNumerosMoveis = 0;
+        qtdMinutos = 300;
+        qtdAparelhosComodato = 1;
+        cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+        break;
+
+      case '241':
+        qtdRamais = 5;
+        qtdNumerosFixos = 2;
+        qtdNumerosMoveis = 0;
+        qtdMinutos = 750;
+        qtdAparelhosComodato = 2;
+        cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+        break;
+
+      case '242':
+        qtdRamais = 10;
+        qtdNumerosFixos = 2;
+        qtdNumerosMoveis = 1;
+        qtdMinutos = 1500;
+        qtdAparelhosComodato = 3;
+        cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+        break;
+
+      case '243':
+        qtdRamais = 15;
+        qtdNumerosFixos = 4;
+        qtdNumerosMoveis = 2;
+        qtdMinutos = 2250;
+        qtdAparelhosComodato = 5;
+        cardPlanos(codPlano, nomePlano, valorPlano, qtdRamais, qtdNumerosFixos, qtdNumerosMoveis, qtdMinutos, qtdAparelhosComodato);
+        break;
     }
-  
-    arrayCardsPlanos.forEach(element => {
-        $('#franquias').append(element);
-    });
-  }, time);
+  }
+
+  arrayCardsPlanos.forEach(element => {
+      $('#franquias').append(element);
+  });
 }
 
 var urlApiErp = '';
 var token = '';
 var urlApiSite = '';
 var planosSite = [];
-var planosLocalStorage = localStorage.getItem('planosSite');
 var arrayCardsPlanos = [];
 
-if(planosLocalStorage) {
-
-  fetch('arquivo.json')
-  .then(response => response.json())
-  .then(data => {
-    urlApiErp = data.urlApiErp;
-    token = data.token;
-    urlApiSite = data.urlApiSite;
-  })
-  .catch(error => console.error('Erro ao ler o arquivo:', error));
-
-  planosSite = JSON.parse(planosLocalStorage);
-  preencherCardsFranquia(planosSite, 1000);
-
-} else {
-
-  fetch('arquivo.json')
-  .then(response => response.json())
-  .then(data => {
-    urlApiErp = data.urlApiErp;
-    token = data.token;
-    urlApiSite = data.urlApiSite;
-
-    fetch(`${urlApiErp}planos?TOKEN=${token}`)
-      .then(response => response.json())
-      .then(data => {
-     
-        data.forEach(element => {
-          if(element.MOSTRAR_SITE == 1) {
-
-            planosSite.push({
-              codigoPlano: element.CODIGO,
-              nomePlano: element.NOME,
-              valor: (Number(element.VALOR).toFixed(2)).toString().replace('.', ',')
-            });
-          }
-        });
-
-        localStorage.setItem('planosSite', JSON.stringify(planosSite));
-      })
-
-      .catch(error => console.error('Erro ao ler o arquivo:', error));
-
-  })
-  .catch(error => console.error('Erro ao ler o arquivo:', error));
-
-  preencherCardsFranquia(planosSite, 3000);
+function carregarArquivoJson() {
+  return new Promise((resolve, reject) => {
+    fetch('arquivo.json')
+    .then(response => response.json())
+    .then(data => {
+      urlApiErp = data.urlApiErp;
+      token = data.token;
+      urlApiSite = data.urlApiSite;
+      resolve();
+    }).catch(error => reject(error));
+  });
 }
+
+function carregarPlanos() {
+  return new Promise((resolve, reject) => {
+    fetch(`${urlApiErp}planos?TOKEN=${token}`)
+    .then(response => response.json())
+    .then(data => {
+    
+      data.forEach(element => {
+        if(element.MOSTRAR_SITE == 1) {
+
+          planosSite.push({
+            codigoPlano: element.CODIGO,
+            nomePlano: element.NOME,
+            valor: (Number(element.VALOR).toFixed(2)).toString().replace('.', ',')
+          });
+        }
+      });
+      resolve(planosSite);
+    })
+    .catch(error => reject(error));
+  });
+}
+
+carregarArquivoJson()
+  .then(carregarPlanos)
+  .then(() => {
+    preencherCardsFranquia(planosSite);
+  })
+  .catch(error => console.error('Erro:', error));
 
 /* video.js */
 const videos = ["video/mulher_telefone1.mp4", "video/garota_telefone.mp4", "video/homem_telefone.mp4", "video/mulher_telefone.mp4", "video/homem_business.mp4"];
