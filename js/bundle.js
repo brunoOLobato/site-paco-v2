@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Inicialmente, mostramos a seção "Mais vendidos" (padrão)
   showSection('franquia');
 });
+
 /* cards-planos.js */
 
 /* video.js */
